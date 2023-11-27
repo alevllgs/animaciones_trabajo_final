@@ -11,9 +11,13 @@ body {
 header{
 
     grid-area: encabezado;
-    background:rgb(66, 66, 232) ;
+    background:rgb(198, 198, 204) ;
     height: 80px;
+    display: flex;
+    justify-content: center;
 }
+
+
 nav {
     
     grid-area: menu;
@@ -34,6 +38,8 @@ footer {
     grid-area: pie-de-pagina;
     background: rgb(19, 5, 82);
     color: white;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -42,8 +48,10 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:15px;
+    padding-bottom: 50px;
+
 }
+
 
 
 .discos{
@@ -51,10 +59,22 @@ footer {
     align-items: center;
     justify-content: center;
     align-content: center;
-    border: px solid black;
     gap: 15px;
     
 }
+
+.titulo_seccion{
+    background-color: rgb(255, 255, 255);
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
 
   .flex-footer{
     display: flex;
@@ -64,7 +84,7 @@ footer {
 
   div {
     display: grid;
-    grid-template-rows: auto 1fr 27fr auto;
+    grid-template-rows: auto 1fr 17fr auto;
     grid-template-areas:
     "encabezado"
     "menu"
@@ -73,32 +93,55 @@ footer {
  
 }
 
+.discos:hover {
+    width: 400px;
+  }
+
 /* vista Mobile oculta el main*/
   @media (max-width: 576px) {
 
-    body {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        text-decoration: none;
-        border: none;
-        outline: none;
 
-    }
 
     header{
         height: 50px;
 
+     
+
     }
 
     nav {
-    
+        height: 180px;
         grid-area: menu;
-        background:rgb(216, 216, 216);
         color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+
+   
 
     }
+
+    nav span img {
+        display: flex;
+        border-radius: 50px;
+        width: 100px;
+        
+
+    }
+
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
     
+    nav button {
+        display: none;
+    }
+
+
     main{
         display: flex;
         flex-direction: column;
@@ -116,8 +159,8 @@ footer {
         display: flex;
         flex-direction: column;
     }
-}
 
+  }
 
 /* vista PC*/
   @media (min-width: 576px) {
@@ -128,6 +171,45 @@ footer {
             "pie-de-pagina pie-de-pagina";
         grid-template-columns: 2fr 9fr;
         grid-template-rows: auto 1fr auto;
+  
 }
+
+nav {
+    display: flex;
+    flex-direction: column;
+   justify-content: flex-start;
+   gap: 50px;
+   
+}
+
+nav span{
+    display: flex;
+    height: 150px;
+    padding-top: 25px;
+    justify-content: center;
+    
+}
+
+nav span img {
+    display: flex;
+    border-radius: 100px;
+  
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+nav button {
+    display: none;
+}
+
+.titulo_seccion{
+    font-size:xx-large;
+    }
+
 
 }

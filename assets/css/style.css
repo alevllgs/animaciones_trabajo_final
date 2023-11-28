@@ -5,24 +5,29 @@ body {
     text-decoration: none;
     border: none;
     outline: none;
-
+    
 }
 
 header{
 
     grid-area: encabezado;
-    background:rgb(198, 198, 204) ;
-    height: 80px;
+    background:rgb(91, 15, 15) ;
+    color: white;
+    font-size: x-large;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
 }
+
 
 
 nav {
     
     grid-area: menu;
-    background:rgb(216, 216, 216);
+    background:rgb(198, 198, 198);
     color: white;
+  
  
 }
 
@@ -36,10 +41,28 @@ main {
 footer {
    
     grid-area: pie-de-pagina;
-    background: rgb(19, 5, 82);
+    background: rgb(91, 15, 15);
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+}
+
+footer div{
+    display: flex;
+    justify-content: center;
+
+   
+}
+
+footer div i{
+    padding-top: 20px;
+ font-size: xx-large;
+    color: white;
+}
+
+footer div h4 a{
+    color: white;
 }
 
 
@@ -61,7 +84,18 @@ footer {
     align-content: center;
     gap: 15px;
     
+    
 }
+
+.grayscale {filter: grayscale(100%);}
+
+.grayscale:hover{
+    filter: grayscale(0%); 
+}
+
+img:hover {
+    box-shadow: 0 0 9px 7px rgb(91, 15, 15, 0.5);
+  }
 
 .titulo_seccion{
     background-color: rgb(255, 255, 255);
@@ -70,10 +104,10 @@ footer {
 }
 
 @keyframes example {
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
+    0%   {color: rgb(91, 15, 15)}
+    25%  {color: yellow;}
+    50%  {color: rgb(91, 15, 15)}
+    100% {color: green;}
   }
 
   .flex-footer{
@@ -93,9 +127,7 @@ footer {
  
 }
 
-.discos:hover {
-    width: 400px;
-  }
+
 
 /* vista Mobile oculta el main*/
   @media (max-width: 576px) {
@@ -110,7 +142,7 @@ footer {
     }
 
     nav {
-        height: 180px;
+        height: 190px;
         grid-area: menu;
         color: white;
         display: flex;
@@ -126,15 +158,18 @@ footer {
         display: flex;
         border-radius: 50px;
         width: 100px;
+        height: 100px;
         
-
     }
 
 
     nav ul {
         display: flex;
         flex-direction: column;
-        padding: 20px;
+        list-style: none;
+        gap: 5px;
+        margin-right: 30px;
+      
     }
     
     nav button {
@@ -201,6 +236,8 @@ nav ul {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    list-style: none;
+  
 }
 
 nav button {
